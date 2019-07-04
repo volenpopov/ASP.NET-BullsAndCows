@@ -1,0 +1,51 @@
+﻿/*COLOR VARIABLES*/
+:root {
+    --color-primary-light: rgba(81, 173, 221, .6);
+    --color-primary-dark: rgba(59, 89, 152, .95);
+    --color-contentBackground: rgba(240,240,240);
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 9rem 3rem 9rem;
+    background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 87vh;
+    background-color: var(--color-contentBackground);
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding: 0;
+    }
+
+    .contentHolder {
+        border: none;
+        min-height: 100vh;
+    }
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    border-top: 2px solid black;
+    font-size: .9rem;
+    font-weight: 600;
+    font-style: italic;
+}
