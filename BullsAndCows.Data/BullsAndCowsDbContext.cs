@@ -8,8 +8,7 @@ namespace BullsAndCows.Data
     {
         public BullsAndCowsDbContext(DbContextOptions<BullsAndCowsDbContext> options)
             : base(options)
-        {
-        }
+        { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
