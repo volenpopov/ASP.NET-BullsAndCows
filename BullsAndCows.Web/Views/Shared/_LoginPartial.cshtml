@@ -1,0 +1,21 @@
+﻿@using BullsAndCows.Data.Models;
+@using Microsoft.AspNetCore.Identity;
+
+@inject SignInManager<BullsAndCowsUser> SignInManager
+@inject UserManager<BullsAndCowsUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item pr-md-3 pl-md-0 pl-sm-3 pl-1">
+        <a class="nav-link text-dark" href="#">My Profile</a>
+    </li>
+}
+else
+{
+    <li class="nav-item pl-md-0 pl-sm-3 pl-1">
+        <a class="nav-link text-dark mr-4" href="#">Login</a>
+    </li>
+    <li class="nav-item pr-md-3 pl-md-0 pl-sm-3 pl-1">
+        <a class="nav-link text-dark" href="#">Register</a>
+    </li>
+}
