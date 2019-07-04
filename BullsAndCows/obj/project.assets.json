@@ -12081,9 +12081,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows\\BullsAndCows.csproj",
-      "projectName": "BullsAndCows",
-      "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows\\BullsAndCows.csproj",
+      "projectUniqueName": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows\\BullsAndCows.Web.csproj",
+      "projectName": "BullsAndCows.Web",
+      "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows\\BullsAndCows.Web.csproj",
       "packagesPath": "C:\\Users\\volenpopov\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows\\obj\\",
       "projectStyle": "PackageReference",
