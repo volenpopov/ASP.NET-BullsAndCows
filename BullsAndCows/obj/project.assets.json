@@ -4438,6 +4438,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "BullsAndCows.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BullsAndCows.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BullsAndCows.Data.dll": {}
+        }
       }
     }
   },
@@ -12065,10 +12078,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "BullsAndCows.Data/1.0.0": {
+      "type": "project",
+      "path": "../BullsAndCows.Data/BullsAndCows.Data.csproj",
+      "msbuildProject": "../BullsAndCows.Data/BullsAndCows.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "BullsAndCows.Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0"
@@ -12103,7 +12122,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj": {
+              "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,9 @@
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Data.deps.json
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Data.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.csprojAssemblyReference.cache
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.csproj.CoreCompileInputs.cache
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.AssemblyInfoInputs.cache
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.AssemblyInfo.cs
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Data.pdb
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.pdb
