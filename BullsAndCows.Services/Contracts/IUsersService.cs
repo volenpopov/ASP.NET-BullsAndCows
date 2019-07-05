@@ -1,9 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using BullsAndCows.Models.BindingModels;
+using System.Threading.Tasks;
 
 namespace BullsAndCows.Services.Contracts
 {
     public interface IUsersService
     {
-        Task CreateUserAsync();
+        Task<bool> CreateUserAsync(UserBindingModel model);
+
+        Task<bool> LoginUserAsync(UserLoginBindingModel model);
     }
 }

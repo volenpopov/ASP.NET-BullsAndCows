@@ -1160,6 +1160,16 @@
         "runtime": {
           "bin/placeholder/BullsAndCows.Data.dll": {}
         }
+      },
+      "BullsAndCows.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BullsAndCows.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BullsAndCows.Models.dll": {}
+        }
       }
     }
   },
@@ -3929,11 +3939,17 @@
       "type": "project",
       "path": "../BullsAndCows.Data/BullsAndCows.Data.csproj",
       "msbuildProject": "../BullsAndCows.Data/BullsAndCows.Data.csproj"
+    },
+    "BullsAndCows.Models/1.0.0": {
+      "type": "project",
+      "path": "../BullsAndCows.Models/BullsAndCows.Models.csproj",
+      "msbuildProject": "../BullsAndCows.Models/BullsAndCows.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BullsAndCows.Data >= 1.0.0",
+      "BullsAndCows.Models >= 1.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -3970,6 +3986,9 @@
           "projectReferences": {
             "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj": {
               "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj"
+            },
+            "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj": {
+              "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj"
             }
           }
         }

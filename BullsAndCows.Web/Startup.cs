@@ -1,5 +1,7 @@
 ﻿using BullsAndCows.Data;
 using BullsAndCows.Data.Models;
+using BullsAndCows.Services;
+using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -7,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace BullsAndCows
 {
@@ -40,6 +43,14 @@ namespace BullsAndCows
                .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<BullsAndCowsDbContext>();
 
+            services.ConfigureApplicationCookie(options =>
+                 {                     
+                     options.LoginPath = "/User/Login";
+                     options.LogoutPath = "/User/Logout";                     
+                 });
+
+            services.AddScoped<IUsersService, UsersService>();
+
             services.AddMvc(options =>
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
@@ -64,6 +75,7 @@ namespace BullsAndCows
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

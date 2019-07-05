@@ -21,5 +21,7 @@ namespace BullsAndCows.Models.BindingModels
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Invalid {0}!")]
         public string ConfirmPassword { get; set; }
+
+        public string StatusMessage { get; set; }
     }
 }

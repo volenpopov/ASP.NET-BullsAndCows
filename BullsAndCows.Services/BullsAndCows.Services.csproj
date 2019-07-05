@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BullsAndCows.Data\BullsAndCows.Data.csproj" />
+    <ProjectReference Include="..\BullsAndCows.Models\BullsAndCows.Models.csproj" />
   </ItemGroup>
 
 </Project>

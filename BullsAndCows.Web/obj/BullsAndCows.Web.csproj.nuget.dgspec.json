@@ -116,6 +116,69 @@
         }
       }
     },
+    "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\BullsAndCows.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\BullsAndCows.Services.csproj",
+        "projectName": "BullsAndCows.Services",
+        "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\BullsAndCows.Services.csproj",
+        "packagesPath": "C:\\Users\\volenpopov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\volenpopov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj": {
+                "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Data\\BullsAndCows.Data.csproj"
+              },
+              "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj": {
+                "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Web\\BullsAndCows.Web.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -147,6 +210,9 @@
               },
               "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj": {
                 "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Models\\BullsAndCows.Models.csproj"
+              },
+              "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\BullsAndCows.Services.csproj": {
+                "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Services\\BullsAndCows.Services.csproj"
               }
             }
           }

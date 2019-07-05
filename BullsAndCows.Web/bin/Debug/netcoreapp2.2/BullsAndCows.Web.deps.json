@@ -25,6 +25,8 @@
       "BullsAndCows.Web/1.0.0": {
         "dependencies": {
           "BullsAndCows.Data": "1.0.0",
+          "BullsAndCows.Models": "1.0.0",
+          "BullsAndCows.Services": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -465,6 +467,27 @@
         },
         "compile": {
           "BullsAndCows.Data.dll": {}
+        }
+      },
+      "BullsAndCows.Models/1.0.0": {
+        "runtime": {
+          "BullsAndCows.Models.dll": {}
+        },
+        "compile": {
+          "BullsAndCows.Models.dll": {}
+        }
+      },
+      "BullsAndCows.Services/1.0.0": {
+        "dependencies": {
+          "BullsAndCows.Data": "1.0.0",
+          "BullsAndCows.Models": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0"
+        },
+        "runtime": {
+          "BullsAndCows.Services.dll": {}
+        },
+        "compile": {
+          "BullsAndCows.Services.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3772,6 +3795,16 @@
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "BullsAndCows.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BullsAndCows.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BullsAndCows.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
