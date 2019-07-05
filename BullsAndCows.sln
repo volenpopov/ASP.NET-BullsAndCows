@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullsAndCows.Web", "BullsAndCows.Web\BullsAndCows.Web.csproj", "{A6D29930-E8DA-4B5B-8760-A5F5FF9AFBA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Data", "BullsAndCows.Data\BullsAndCows.Data.csproj", "{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullsAndCows.Data", "BullsAndCows.Data\BullsAndCows.Data.csproj", "{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Services", "BullsAndCows.Services\BullsAndCows.Services.csproj", "{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
