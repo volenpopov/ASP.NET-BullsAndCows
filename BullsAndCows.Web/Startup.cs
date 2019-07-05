@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Threading.Tasks;
 
 namespace BullsAndCows
 {
@@ -61,6 +62,19 @@ namespace BullsAndCows
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetRequiredService<BullsAndCowsDbContext>();
+                var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<BullsAndCowsUser>>();
+
+                if (env.IsDevelopment())
+                {
+                    dbContext.Database.Migrate();
+                }
+
+                ApplicationDbContextSeeder.SeedUsers(dbContext, userManager);
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
