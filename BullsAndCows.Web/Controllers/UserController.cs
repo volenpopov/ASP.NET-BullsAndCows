@@ -1,4 +1,4 @@
-﻿using BullsAndCows.Web.Models.BindingModels;
+﻿using BullsAndCows.Models.BindingModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BullsAndCows.Web.Controllers
