@@ -4,19 +4,22 @@ namespace BullsAndCows.Web.Models.BindingModels
 {
     public class UserBindingModel
     {
-        //TODO
+        //TODO: error msg constant
 
         [Required]
-        [StringLength(25, MinimumLength = 5, ErrorMessage = "Username must be between 5 and 25 characters long!")]
+        [Display(Name = "Username")]
+        [StringLength(25, MinimumLength = 5, ErrorMessage = "{0} must be between {2} and {1} characters long!")]
         public string Username { get; set; }
 
         [Required]
-        [MinLength(5, ErrorMessage = "Password must be at least 5 characters long!")]
+        [StringLength(25, MinimumLength = 5, ErrorMessage = "{0} must be between {2} and {1} characters long!")]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Invalid Confirm Password!")]
+        [Compare("Password", ErrorMessage = "Invalid {0}!")]
         public string ConfirmPassword { get; set; }
     }
 }
