@@ -23,8 +23,13 @@ using BullsAndCows.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\Views\_ViewImports.cshtml"
+using BullsAndCows.Web;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99464617055fdb505bb0bb7fd91f9b14f7b0d030", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82c849bc7f1e0dfdb85262465b7311b78a6d96df", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b9dd9cbfcd9924ba8f870196adc3fc1b74e4522d", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

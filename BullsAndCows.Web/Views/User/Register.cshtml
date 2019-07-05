@@ -1,0 +1,43 @@
+﻿@model BullsAndCows.Web.Models.BindingModels.UserBindingModel;
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="m-auto">
+            <h1 class="text-center">Create an account:</h1>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <form method="post" asp-action="Register" class="mt-5 text-center">
+                <div class="form-group text-left w-100">
+                    <label asp-for="Username" class="font-weight-bold">Username:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input asp-for="Username" class="form-control" placeholder="Enter your username...">
+                    </div>
+                </div>
+                <span asp-validation-for="Username" class="text-danger"></span>
+                <div class="form-group text-left mt-1">
+                    <label asp-for="Password" class="font-weight-bold">Password:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input asp-for="Password" class="form-control" placeholder="Enter your password...">
+                    </div>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                <input type="submit" value="Register" class="btn btn-primary w-50 btn-lg my-3">
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

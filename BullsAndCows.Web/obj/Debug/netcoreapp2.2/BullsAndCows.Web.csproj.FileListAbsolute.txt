@@ -61,3 +61,4 @@ C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\De
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\BullsAndCows.Web.dll
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\BullsAndCows.Web.pdb
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Register.g.cshtml.cs

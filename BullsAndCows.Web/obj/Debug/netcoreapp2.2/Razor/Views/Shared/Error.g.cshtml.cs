@@ -23,8 +23,13 @@ using BullsAndCows.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\Views\_ViewImports.cshtml"
+using BullsAndCows.Web;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82c849bc7f1e0dfdb85262465b7311b78a6d96df", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b9dd9cbfcd9924ba8f870196adc3fc1b74e4522d", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998
