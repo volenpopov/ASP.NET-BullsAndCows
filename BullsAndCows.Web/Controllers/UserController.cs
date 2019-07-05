@@ -69,6 +69,12 @@ namespace BullsAndCows.Web.Controllers
 
             return Redirect("/");
         }
+    
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
+            return Redirect("/");
+        }
     }
 }
