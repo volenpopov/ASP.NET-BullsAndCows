@@ -18,7 +18,7 @@ namespace BullsAndCows.Data.Models
         public int Losses { get; set; }
 
         [NotMapped]
-        public double WinLossRatio => this.Wins / this.Losses;
+        public string WinLossRatio => $"{this.Wins / this.Losses:f1}";
 
         public int TotalPoints { get; set; }
 
