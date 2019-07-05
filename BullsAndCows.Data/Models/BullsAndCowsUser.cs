@@ -17,9 +17,6 @@ namespace BullsAndCows.Data.Models
 
         public int Losses { get; set; }
 
-        [NotMapped]
-        public string WinLossRatio => $"{this.Wins / this.Losses:f1}";
-
         public int TotalPoints { get; set; }
 
         public DateTime CreatedOn { get; set; }
