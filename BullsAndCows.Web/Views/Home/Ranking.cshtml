@@ -1,0 +1,44 @@
+﻿@model BullsAndCows.Models.ViewModels.UserListRankingViewModel;
+
+@{
+    ViewData["Title"] = "Ranking";
+}
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped my-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Wins</th>
+                    <th scope="col">Losses</th>
+                    <th scope="col">Win Ratio</th>
+                    <th scope="col">Points</th>
+                    <th scope="col">Total Games</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Users.Count(); i++)
+                {
+                    <tr>
+                        <th scope="row">@(i + 1)</th>
+                        @if (i == 0)
+                        {
+                            <td class="font-weight-bold"><i class="fas fa-crown mr-1"></i> @Model.Users[i].Username</td>
+                        }
+                        else
+                        {
+                            <td>@Model.Users[i].Username</td>
+                        }
+                        <td>@Model.Users[i].Wins</td>
+                        <td>@Model.Users[i].Losses</td>
+                        <td>@Model.Users[i].WinLossRatio</td>
+                        <td>@Model.Users[i].TotalPoints</td>
+                        <td>@Model.Users[i].TotalGames</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

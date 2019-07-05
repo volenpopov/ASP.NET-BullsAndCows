@@ -14,5 +14,7 @@ namespace BullsAndCows.Services.Contracts
         Task LogoutUserAsync();
 
         Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal);
+
+        Task<UserListRankingViewModel> GetTop25();
     }
 }

@@ -4,7 +4,10 @@ using BullsAndCows.Models.BindingModels;
 using BullsAndCows.Models.ViewModels;
 using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -79,6 +82,36 @@ namespace BullsAndCows.Services
             userProfileViewMdel.WinLossRatio = $"{ratio * 100:f1}%";
 
             return userProfileViewMdel;
+        }
+
+        public async Task<UserListRankingViewModel> GetTop25()
+        {
+            var topUsers = await this.dbContext.Users
+                .OrderByDescending(user => user.TotalPoints)
+                .ThenByDescending(user => user.WinLossRatio)
+                .ThenBy(user => user.TotalGames)
+                .ThenBy(user => user.UserName)
+                .Take(25)
+                .ToArrayAsync();
+
+            var userRankingList = new List<UserRankingViewModel>(25);
+
+            foreach (var user in topUsers)
+            {
+                var userRankingViewModel = new UserRankingViewModel
+                {
+                    Username = user.UserName,
+                    Wins = user.Wins,
+                    Losses = user.Losses,
+                    TotalGames = user.TotalGames,
+                    WinLossRatio = user.WinLossRatio,
+                    TotalPoints = user.TotalPoints
+                };
+
+                userRankingList.Add(userRankingViewModel);
+            }
+
+            return new UserListRankingViewModel { Users = userRankingList};
         }
     }
 }

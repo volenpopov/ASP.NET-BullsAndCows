@@ -68,3 +68,4 @@ C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\bin\De
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Login.g.cshtml.cs
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_StatusMessage.g.cshtml.cs
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\User\Profile.g.cshtml.cs
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Ranking.g.cshtml.cs
