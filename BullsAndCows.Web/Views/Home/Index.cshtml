@@ -11,17 +11,20 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <div class="text-center">
-        <h1 class="display-4">
-            Welcome, @User.Identity.Name!
+        <h1 class="display-4 mb-3">
+            Welcome, <span class="text-primary">@User.Identity.Name</span>!
         </h1>
+        <p class="lead font-italic" style="font-size: 2rem;">Want to play?</p>
+        <a class="btn btn-lg btn-primary px-4" asp-controller="" asp-action="">Start a game</a>
     </div>
 }
 else
 {
     <div class="text-center">
-        <h1 class="display-4">
+        <h1 class="display-4 mb-5">
             Welcome!
         </h1>
+        <p class="lead font-italic" style="font-size: 2rem;">Create an account, in order to play the game.</p>
     </div>
 }
 
