@@ -73,8 +73,12 @@ namespace BullsAndCows.Services
                 CreatedOn = user.CreatedOn.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                 Wins = user.Wins,
                 Losses = user.Losses,
-                TotalPoints = user.TotalPoints
+                TotalPoints = user.TotalPoints                              
             };
+
+            var ratio = (double) userProfileViewMdel.Wins / userProfileViewMdel.TotalGames;
+
+            userProfileViewMdel.WinLossRatio = $"{ratio * 100:f1}%";
 
             return userProfileViewMdel;
         }
