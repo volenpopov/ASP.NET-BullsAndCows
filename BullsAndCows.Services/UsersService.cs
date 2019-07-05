@@ -1,8 +1,11 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using BullsAndCows.Data;
 using BullsAndCows.Data.Models;
 using BullsAndCows.Models.BindingModels;
+using BullsAndCows.Models.ViewModels;
 using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -58,6 +61,22 @@ namespace BullsAndCows.Services
         public async Task LogoutUserAsync()
         {
             await this.signInManager.SignOutAsync();
+        }
+
+        public async Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal)
+        {
+            var user = await this.userManager.GetUserAsync(principal);
+
+            var userProfileViewMdel = new UserProfileViewModel
+            {
+                Username = user.UserName,
+                CreatedOn = user.CreatedOn.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+                Wins = user.Wins,
+                Losses = user.Losses,
+                TotalPoints = user.TotalPoints
+            };
+
+            return userProfileViewMdel;
         }
     }
 }

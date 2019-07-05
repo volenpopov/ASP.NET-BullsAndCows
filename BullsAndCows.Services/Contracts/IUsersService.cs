@@ -1,4 +1,6 @@
 ﻿using BullsAndCows.Models.BindingModels;
+using BullsAndCows.Models.ViewModels;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace BullsAndCows.Services.Contracts
@@ -10,5 +12,7 @@ namespace BullsAndCows.Services.Contracts
         Task<bool> LoginUserAsync(UserLoginBindingModel model);
 
         Task LogoutUserAsync();
+
+        Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal);
     }
 }

@@ -78,5 +78,15 @@ namespace BullsAndCows.Web.Controllers
 
             return Redirect("/");
         }
+
+        [Authorize]
+        public async Task<IActionResult> Profile()
+        {
+            var activeUser = this.User;
+
+            var userProfileViewModel = await this.usersService.GetLoggedUserModelAsync(activeUser);
+
+            return View(userProfileViewModel);
+        }
     }
 }
