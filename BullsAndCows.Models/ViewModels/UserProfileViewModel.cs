@@ -13,8 +13,10 @@ namespace BullsAndCows.Models.ViewModels
 
         public int Losses { get; set; }
 
-        public string WinLossRatio => $"{this.Wins / this.Losses:f1}";
-
+        public string WinLossRatio => this.Losses > 0
+                                        ? $"{this.Wins / this.Losses:f1}"
+                                        : "0";
+        
         public int TotalGames => this.Wins + this.Losses;
         
         public int TotalPoints { get; set; }
