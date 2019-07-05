@@ -17,7 +17,7 @@ namespace BullsAndCows.Services
             this.userManager = userManager;
         }
 
-        public Task CreateUserAsync(string username, string password, string confirmPassword)
+        public Task CreateUserAsync()
         {
             
         }

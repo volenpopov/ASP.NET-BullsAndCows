@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullsAndCows.Web", "BullsAn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullsAndCows.Data", "BullsAndCows.Data\BullsAndCows.Data.csproj", "{50ACE07B-7F83-44FB-B9C7-256D4ABF03A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Services", "BullsAndCows.Services\BullsAndCows.Services.csproj", "{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BullsAndCows.Services", "BullsAndCows.Services\BullsAndCows.Services.csproj", "{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Models", "BullsAndCows.Models\BullsAndCows.Models.csproj", "{879D2510-C0FF-4FCE-A9C6-776021F98252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC53DBEE-E675-4CFC-B27C-E1BB93DC44EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879D2510-C0FF-4FCE-A9C6-776021F98252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879D2510-C0FF-4FCE-A9C6-776021F98252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879D2510-C0FF-4FCE-A9C6-776021F98252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879D2510-C0FF-4FCE-A9C6-776021F98252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
