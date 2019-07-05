@@ -1,14 +1,12 @@
-﻿using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using BullsAndCows.Data;
+﻿using BullsAndCows.Data;
 using BullsAndCows.Data.Models;
 using BullsAndCows.Models.BindingModels;
 using BullsAndCows.Models.ViewModels;
 using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace BullsAndCows.Services
 {
