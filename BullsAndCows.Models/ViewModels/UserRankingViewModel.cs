@@ -10,13 +10,21 @@ namespace BullsAndCows.Models.ViewModels
 
         public int Losses { get; set; }
 
-        [Display(Name = "Total Games:")]
-        public int TotalGames { get; set; }
-
         [Display(Name = "Total Points:")]
         public int TotalPoints { get; set; }
 
+        [Display(Name = "Total Games:")]
+        public int TotalGames => this.Wins + this.Losses;
+
         [Display(Name = "Win/Loss Ratio:")]
-        public string WinLossRatio { get; set; }
+        public string WinLossRatio
+        {
+            get
+            {
+                var ratio = (double)this.Wins / this.TotalGames;
+
+                return $"{ratio * 100:f1}%";
+            }
+        }
     }
 }
