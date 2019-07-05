@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BullsAndCows.Web.Models.BindingModels
+namespace BullsAndCows.Models.BindingModels
 {
     public class UserBindingModel
     {
