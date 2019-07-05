@@ -8,5 +8,7 @@ namespace BullsAndCows.Services.Contracts
         Task<bool> CreateUserAsync(UserBindingModel model);
 
         Task<bool> LoginUserAsync(UserLoginBindingModel model);
+
+        Task LogoutUserAsync();
     }
 }

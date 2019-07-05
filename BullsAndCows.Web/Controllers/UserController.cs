@@ -1,6 +1,7 @@
 ﻿using BullsAndCows.Models.BindingModels;
 using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace BullsAndCows.Web.Controllers
 
         public async Task<IActionResult> Register()
         {
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            await this.usersService.LogoutUserAsync();
 
             return View(new UserBindingModel());
         }
@@ -44,7 +45,7 @@ namespace BullsAndCows.Web.Controllers
         }
         public async Task<IActionResult> Login()
         {
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            await this.usersService.LogoutUserAsync();
 
             return View(new UserLoginBindingModel());
         }
@@ -70,9 +71,10 @@ namespace BullsAndCows.Web.Controllers
             return Redirect("/");
         }
     
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            await this.usersService.LogoutUserAsync();
 
             return Redirect("/");
         }

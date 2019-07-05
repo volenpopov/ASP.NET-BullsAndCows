@@ -54,5 +54,10 @@ namespace BullsAndCows.Services
 
             return false;
         }
+
+        public async Task LogoutUserAsync()
+        {
+            await this.signInManager.SignOutAsync();
+        }
     }
 }
