@@ -28,17 +28,6 @@ main {
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
-    body {
-        padding: 0;
-    }
-
-    .contentHolder {
-        border: none;
-        min-height: 100vh;
-    }
-}
-
 header {
     border-bottom: 2px solid black;
 }
@@ -48,4 +37,15 @@ footer {
     font-size: .9rem;
     font-weight: 600;
     font-style: italic;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding: 0;
+    }
+
+    .contentHolder {
+        border: none;
+        min-height: 100vh;
+    }
 }
