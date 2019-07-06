@@ -66,7 +66,11 @@ namespace BullsAndCows.Services
 
         public async Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal)
         {
-            var user = await this.userManager.GetUserAsync(principal);
+            var userId = this.userManager.GetUserId(principal);
+
+            var user = await this.dbContext.Users
+                .Include(usr => usr.Games)
+                .FirstAsync(usr => usr.Id == userId);
 
             var userProfileViewMdel = new UserProfileViewModel
             {
@@ -83,6 +87,7 @@ namespace BullsAndCows.Services
         public async Task<UserListRankingViewModel> GetTop25()
         {
             var topUsers = await this.dbContext.Users
+                .Include(user => user.Games)
                 .OrderByDescending(user => user.TotalPoints)
                 .ThenByDescending(user => user.WinLossRatio)
                 .ThenBy(user => user.TotalGames)
