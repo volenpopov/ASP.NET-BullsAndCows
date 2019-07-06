@@ -1,0 +1,98 @@
+﻿@model int;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h3 class="text-center mb-5 mt-3"><span style="border-bottom: 3px solid black">Guess the number:</span></h3>
+    <div class="row flex-column flex-sm-row justify-content-center align-content-center">
+        <div class="col-12 col-sm-4 d-flex flex-column justify-content-center align-items-center" id="userInputBlock">
+            <label for="userNumber" class="lead" style="font-weight: 400">Type your guess below:</label>
+            <input class="d-block mt-1 mb-3 p-1 text-center" type="number" id="userNumber" placeholder="Your number..." style="border-radius: 5px; font-size:1.1rem" />
+            <button class="btn btn-primary" id="playBtn">Make a guess</button>
+        </div>
+        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+            <ul class="py-3 text-center" id="guessesList" style="font-size: 1.2rem;"></ul>
+        </div>
+        <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+            <p class="display-4">@Model</p>
+        </div>
+    </div>
+</div>
+
+<script>
+(function play(answer) {
+    let playBtn = document.getElementById("playBtn");
+    playBtn.addEventListener("click", onPlayerGuess);
+
+    let userGuessesList = document.getElementById("guessesList");
+    let userInputBlock = document.getElementById("userInputBlock");
+    let userInput = document.getElementById("userNumber");
+
+    let playerGuessesCounter = 0;
+    let answerNumberArr = Array.from(answer.toString());
+
+    function onPlayerGuess() {
+        playerGuessesCounter++;
+
+        let userNumStr = userInput.value;
+        let userNumber = Number(userNumStr);
+
+        if (userNumStr === "" || !Number.isInteger(userNumber) || userNumber < 0 || userNumStr.startsWith("0")) {
+            playerGuessesCounter--;
+            alert("Please enter a valid positive integer number!");
+            return;
+        }
+
+        if (playerGuessesCounter > 8)
+        {
+            let looseElement = document.createElement("p");
+            looseElement.classList.add("text-danger");
+            looseElement.classList.add("mt-3");
+            looseElement.classList.add("display-4");
+            looseElement.textContent = "You lost!";
+
+            userInputBlock.appendChild(looseElement);
+            playBtn.removeEventListener("click", onPlayerGuess);
+            playBtn.disabled = true;
+        } else {
+
+            if (userNumber === answer) {
+
+            } else {
+                let userNumberArr = Array.from(userNumStr);
+                let bullsCount = 0;
+                let cowsCount = 0;
+
+                for (let i = 0; i < userNumberArr.length; i++) {
+                    const numStr = userNumberArr[i];
+
+                    if (answerNumberArr.includes(numStr)) {
+                        let numIndex = answerNumberArr.indexOf(numStr);
+
+                        if (i === numIndex) {
+                            bullsCount++;
+                        } else {
+                            cowsCount++;
+                        }
+                    }
+                }
+
+                let output = document.createElement("li");
+                output.classList.add("mb-1");
+
+                let bullsWord = bullsCount === 1 ? "bull" : "bulls";
+                let cowsWord = cowsCount === 1 ? "cow" : "cows";
+
+                output.textContent = `${bullsCount} ${bullsWord} and ${cowsCount} ${cowsWord}. Your guess: ${userNumber}`;
+
+                userGuessesList.appendChild(output);
+            }
+        }
+
+    }
+})(@Model);
+</script>
+
