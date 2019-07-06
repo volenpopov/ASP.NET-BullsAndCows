@@ -1,10 +1,9 @@
-﻿using System;
+﻿using BullsAndCows.Data.Common;
+using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using BullsAndCows.Data.Common;
-using Microsoft.AspNetCore.Identity;
 
 namespace BullsAndCows.Data.Models
 {
@@ -13,7 +12,7 @@ namespace BullsAndCows.Data.Models
         public BullsAndCowsUser()
         {
             this.CreatedOn = DateTime.UtcNow;
-            this.Games = new List<Game>();
+            this.Games = new HashSet<Game>();
         }
 
         [NotMapped]
@@ -47,6 +46,6 @@ namespace BullsAndCows.Data.Models
         public bool IsDeleted { get; set; }
         public DateTime? DeletedOn { get; set; }
 
-        public List<Game> Games { get; set; }
+        public ICollection<Game> Games { get; set; }
     }
 }
