@@ -78,7 +78,9 @@ namespace BullsAndCows.Services
                 CreatedOn = user.CreatedOn.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                 Wins = user.Wins,
                 Losses = user.Losses,
-                TotalPoints = user.TotalPoints                              
+                TotalPoints = user.TotalPoints,
+                TotalGames = user.TotalGames,
+                WinLossRatio = user.WinLossRatio
             };
            
             return userProfileViewMdel;
@@ -88,6 +90,7 @@ namespace BullsAndCows.Services
         {
             var topUsers = await this.dbContext.Users
                 .Include(user => user.Games)
+                .Where(usr => usr.TotalPoints > 0)
                 .OrderByDescending(user => user.TotalPoints)
                 .ThenByDescending(user => user.WinLossRatio)
                 .ThenBy(user => user.TotalGames)
@@ -104,7 +107,9 @@ namespace BullsAndCows.Services
                     Username = user.UserName,
                     Wins = user.Wins,
                     Losses = user.Losses,
-                    TotalPoints = user.TotalPoints
+                    TotalPoints = user.TotalPoints,
+                    TotalGames = user.TotalGames,
+                    WinLossRatio = user.WinLossRatio
                 };
 
                 userRankingList.Add(userRankingViewModel);

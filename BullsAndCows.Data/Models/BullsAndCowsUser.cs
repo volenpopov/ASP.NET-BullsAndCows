@@ -36,9 +36,15 @@ namespace BullsAndCows.Data.Models
         {
             get
             {
-                var ratio = (double) this.Wins / this.TotalGames;
+                var totalGames = this.TotalGames;
 
-                return $"{ratio * 100:f1}%";
+                if (totalGames > 0)
+                {
+                    var ratio = (double)this.Wins / this.TotalGames;
+                    return $"{ratio * 100:f1}%";
+                }
+
+                return "0%";
             }
         }
 
