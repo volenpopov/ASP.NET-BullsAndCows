@@ -1,5 +1,6 @@
 ﻿using BullsAndCows.Data.Common;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BullsAndCows.Data.Models
 {
@@ -15,6 +16,7 @@ namespace BullsAndCows.Data.Models
 
         public GameStatus Status { get; set; }
 
+        [Required]
         public string UserId { get; set; }
         public BullsAndCowsUser User { get; set; }
     }
