@@ -24,11 +24,7 @@ namespace BullsAndCows.Data
                 var user = new BullsAndCowsUser
                 {
                     UserName = username,
-                    Wins = new Random().Next(5, 120),
-                    Losses = new Random().Next(5, 120)
                 };
-
-                user.TotalPoints = user.Wins * 3;
 
                 userManager.CreateAsync(user, password);
             }
