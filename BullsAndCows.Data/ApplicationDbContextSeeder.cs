@@ -26,7 +26,7 @@ namespace BullsAndCows.Data
                     UserName = username,
                 };
 
-                userManager.CreateAsync(user, password);
+                userManager.CreateAsync(user, password).Wait();
             }
         }
     }
