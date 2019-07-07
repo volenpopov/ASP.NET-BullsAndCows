@@ -16,8 +16,10 @@
         <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
             <ul class="py-3" id="guessesList" style="font-size: 1.2rem;"></ul>
         </div>
-        <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
-            <p class="display-4">@Model.Number</p>
+        <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-center">
+            <p style="font-size:2rem">XXXX</p>
+            <p class="d-block font-italic text-center">I am leaving the answer below, so it is easier for you to test : )</p>
+            <p class="d-block">Answer: @Model.Number</p>
         </div>
     </div>
     <form hidden method="post" asp-controller="Game" asp-action="Win" asp-route-gameId="@Model.Id">
