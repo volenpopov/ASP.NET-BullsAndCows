@@ -1,4 +1,4 @@
-﻿@model int;
+﻿@model BullsAndCows.Models.ViewModels.GameViewModel;
 
 @{
     ViewData["Title"] = "Index";
@@ -17,11 +17,16 @@
             <ul class="py-3 text-center" id="guessesList" style="font-size: 1.2rem;"></ul>
         </div>
         <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
-            <p class="display-4">@Model</p>
+            <p class="display-4">@Model.Number</p>
         </div>
     </div>
+    <form hidden method="post" asp-controller="Game" asp-action="Win" asp-route-gameId="@Model.Id">
+        <input asp-for="@Model.Id"/>
+        <input type="submit" id="winBtn"/>
+    </form>
 </div>
 
+@*//TODO: Refactor*@
 <script>
 (function play(answer) {
     let playBtn = document.getElementById("playBtn");
@@ -59,8 +64,8 @@
             playBtn.disabled = true;
         } else {
 
-            if (userNumber === answer) {
-
+            if (userNumber === answer) {                
+                document.getElementById("winBtn").click();
             } else {
                 let userNumberArr = Array.from(userNumStr);
                 let bullsCount = 0;
@@ -93,6 +98,6 @@
         }
 
     }
-})(@Model);
+})(@Model.Number);
 </script>
 

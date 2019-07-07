@@ -21,7 +21,7 @@ namespace BullsAndCows.Controllers
 
         public async Task<IActionResult> Ranking()
         {
-            var ranking = await this.usersService.GetTop25();
+            var ranking = await this.usersService.GetTop25Async();
 
             return View(ranking);
         }

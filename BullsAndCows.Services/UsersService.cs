@@ -64,13 +64,18 @@ namespace BullsAndCows.Services
             await this.signInManager.SignOutAsync();
         }
 
-        public async Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal)
+        private async Task<BullsAndCowsUser> GetLoggedUserAsync(ClaimsPrincipal principal)
         {
             var userId = this.userManager.GetUserId(principal);
 
-            var user = await this.dbContext.Users
+            return await this.dbContext.Users
                 .Include(usr => usr.Games)
                 .FirstAsync(usr => usr.Id == userId);
+        }
+
+        public async Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal)
+        {
+            var user = await this.GetLoggedUserAsync(principal);
 
             var userProfileViewMdel = new UserProfileViewModel
             {
@@ -86,7 +91,7 @@ namespace BullsAndCows.Services
             return userProfileViewMdel;
         }
 
-        public async Task<UserListRankingViewModel> GetTop25()
+        public async Task<UserListRankingViewModel> GetTop25Async()
         {
             var topUsers = await this.dbContext.Users
                 .Include(user => user.Games)
@@ -116,6 +121,13 @@ namespace BullsAndCows.Services
             }
 
             return new UserListRankingViewModel { Users = userRankingList};
+        }
+
+        public async Task<int> GetUserScoreAsync(ClaimsPrincipal principal)
+        {
+            var user = await this.GetLoggedUserAsync(principal);
+
+            return user.TotalPoints;            
         }
     }
 }

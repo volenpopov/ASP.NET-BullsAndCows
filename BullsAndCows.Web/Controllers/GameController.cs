@@ -8,10 +8,12 @@ namespace BullsAndCows.Web.Controllers
     public class GameController : Controller
     {
         private readonly IGamesService gamesService;
+        private readonly IUsersService userService;
 
-        public GameController(IGamesService gamesService)
+        public GameController(IGamesService gamesService, IUsersService userService)
         {
             this.gamesService = gamesService;
+            this.userService = userService;
         }
 
         [Authorize]
@@ -19,16 +21,20 @@ namespace BullsAndCows.Web.Controllers
         {
             var activeUser = this.User;
 
-            var numberToGuess = await this.gamesService.InitializeGame(activeUser);
+            var numberToGuess = await this.gamesService.InitializeGameAsync(activeUser);
 
             return View(numberToGuess);
         }
 
-        [HttpPost]
         [Authorize]
-        public IActionResult Index(string model)
+        [HttpPost]
+        public async Task<IActionResult> Win(string gameId)
         {
-            return View();
+            await this.gamesService.ChangeGameStatusToWonAsync(gameId);
+
+            var userScore = await this.userService.GetUserScoreAsync(this.User);
+
+            return View(userScore);
         }
     }
 }
