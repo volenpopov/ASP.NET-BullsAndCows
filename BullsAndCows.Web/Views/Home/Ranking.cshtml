@@ -4,8 +4,8 @@
     ViewData["Title"] = "Ranking";
 }
 
-<div class="container">
-    <div class="table-responsive">
+<div class="container d-flex flex-wrap justify-content-center">
+    <div class="table-responsive flex-grow-1">
         <table class="table table-striped my-5">
             <thead>
                 <tr>
@@ -41,4 +41,5 @@
             </tbody>
         </table>
     </div>
+    <a class="btn btn-secondary mt-3" asp-controller="Home" asp-action="Index">Go Back</a>
 </div>
