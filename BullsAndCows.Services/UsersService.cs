@@ -112,7 +112,7 @@ namespace BullsAndCows.Services
                 .OrderByDescending(user => user.TotalPoints)
                 .ThenByDescending(user => user.WinLossRatio)
                 .ThenBy(user => user.TotalGames)
-                .ThenByDescending(user => user.CreatedOn)
+                .ThenBy(user => user.CreatedOn)
                 .Take(25)
                 .ToArray();
               
