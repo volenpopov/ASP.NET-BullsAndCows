@@ -76,7 +76,7 @@ namespace BullsAndCows.Services
 
             return await this.dbContext.Users
                 .Include(usr => usr.Games)
-                .FirstAsync(usr => usr.Id == userId);
+                .FirstOrDefaultAsync(usr => usr.Id == userId);
         }
 
         public async Task<UserProfileViewModel> GetLoggedUserModelAsync(ClaimsPrincipal principal)
@@ -138,6 +138,16 @@ namespace BullsAndCows.Services
             var user = await this.GetLoggedUserAsync(principal);
 
             return user.TotalPoints;            
+        }
+
+        public async Task DeleteUserAsync(string username)
+        {
+            var user = await this.dbContext.Users
+                .SingleOrDefaultAsync(usr => usr.UserName == username);
+
+            user.IsDeleted = true;
+
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }

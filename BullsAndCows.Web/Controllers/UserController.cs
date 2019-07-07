@@ -88,5 +88,18 @@ namespace BullsAndCows.Web.Controllers
 
             return View(userProfileViewModel);
         }
+
+        [Authorize]
+        [HttpPost]        
+        public async Task<IActionResult> Delete()
+        {
+            var name = this.User.Identity.Name;
+
+            await this.usersService.DeleteUserAsync(name);
+            await this.usersService.LogoutUserAsync();
+
+            return Redirect("/");
+        }
+
     }
 }

@@ -18,5 +18,7 @@ namespace BullsAndCows.Services.Contracts
         Task<UserListRankingViewModel> GetTop25Async();
 
         Task<int> GetUserScoreAsync(ClaimsPrincipal principal);
+
+        Task DeleteUserAsync(string username);
     }
 }
