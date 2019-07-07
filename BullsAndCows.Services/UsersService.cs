@@ -93,16 +93,20 @@ namespace BullsAndCows.Services
 
         public async Task<UserListRankingViewModel> GetTop25Async()
         {
-            var topUsers = await this.dbContext.Users
+            var allUsers = await this.dbContext.Users
                 .Include(user => user.Games)
-                .Where(usr => usr.TotalPoints > 0)
+                .Where(user => !user.IsDeleted)
+                .ToArrayAsync();
+
+            var topUsers = allUsers
+                .Where(user => user.TotalPoints > 0)
                 .OrderByDescending(user => user.TotalPoints)
                 .ThenByDescending(user => user.WinLossRatio)
                 .ThenBy(user => user.TotalGames)
-                .ThenBy(user => user.UserName)
+                .ThenByDescending(user => user.CreatedOn)
                 .Take(25)
-                .ToArrayAsync();
-
+                .ToArray();
+              
             var userRankingList = new List<UserRankingViewModel>(25);
 
             foreach (var user in topUsers)
