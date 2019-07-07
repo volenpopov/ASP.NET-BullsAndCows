@@ -90,9 +90,7 @@ namespace BullsAndCows.Services
             var userProfileViewMdel = new UserProfileViewModel
             {
                 Username = user.UserName,
-                CreatedOn = user.CreatedOn
-                    .ToString(GlobalConstants.DateFormat, CultureInfo.InvariantCulture) 
-                    + $" ({GlobalConstants.ServerTimeZone})",
+                CreatedOn = user.CreatedOn.ToString(GlobalConstants.DateFormat, CultureInfo.InvariantCulture),
                 Wins = user.Wins,
                 Losses = user.Losses,
                 TotalPoints = user.TotalPoints,

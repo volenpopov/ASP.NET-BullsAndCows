@@ -12,8 +12,6 @@
 
         public const string DateFormat = "dd/MM/yyyy";
 
-        public const string ServerTimeZone = "UTC Time";
-
         public const string StringLengthErrorMsg = "{0} must be between {2} and {1} characters long!";
 
         public const string InvalidParameterErrorMsg = "Invalid {0}!";
