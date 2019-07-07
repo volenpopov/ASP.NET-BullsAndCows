@@ -70,9 +70,11 @@ namespace BullsAndCows
                 {
                     //dbContext.Database.Migrate();
                     dbContext.Database.EnsureCreated();
+
+                    ApplicationDbContextSeeder.SeedData(dbContext, userManager);
                 }
 
-                ApplicationDbContextSeeder.SeedUsers(dbContext, userManager);
+                
             }
 
             if (env.IsDevelopment())

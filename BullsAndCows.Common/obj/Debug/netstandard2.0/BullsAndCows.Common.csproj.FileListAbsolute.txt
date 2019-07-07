@@ -6,3 +6,4 @@ C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.AssemblyInfo.cs
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.dll
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.pdb
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.csprojAssemblyReference.cache
