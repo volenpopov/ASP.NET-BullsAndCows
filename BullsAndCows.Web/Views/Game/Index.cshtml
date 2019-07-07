@@ -23,12 +23,11 @@
         </div>
     </div>
     <form hidden method="post" asp-controller="Game" asp-action="Win" asp-route-gameId="@Model.Id">
-        <input asp-for="@Model.Id"/>
-        <input type="submit" id="winBtn"/>
+        <input asp-for="@Model.Id" />
+        <input type="submit" id="winBtn" />
     </form>
 </div>
 
-@*//TODO: Refactor*@
 <script>
 (function play(answer) {
     let playBtn = document.getElementById("playBtn");
@@ -47,14 +46,36 @@
         let userNumStr = userInput.value;
         let userNumber = Number(userNumStr);
 
-        if (userNumStr === "" || !Number.isInteger(userNumber) || userNumber < 0 || userNumStr.startsWith("0")) {
-            playerGuessesCounter--;
-            alert("Please enter a valid positive integer number!");
-            return;
+        let isValidInput = validateUserInput(userNumStr, userNumber);
+
+        if (isValidInput) {
+            if (playerGuessesCounter > 8) {
+                loose();
+            } else {
+                if (userNumber === answer) {
+                    document.getElementById("winBtn").click();
+                } else {
+                    let outputText = getBullsAndCows(userNumStr);
+
+                    let output = document.createElement("li");
+                    output.classList.add("mb-1");
+                    output.textContent = outputText;
+
+                    userGuessesList.appendChild(output);
+                }
+            }
         }
 
-        if (playerGuessesCounter > 8)
-        {
+        function validateUserInput(userNumStr, userNumber) {
+            if (userNumStr === "" || !Number.isInteger(userNumber) || userNumber < 0 || userNumStr.startsWith("0")) {
+                playerGuessesCounter--;
+                alert("Please enter a valid positive integer number!");
+                return false;
+            }
+            return true;
+        }
+
+        function loose() {
             let looseElement = document.createElement("p");
             looseElement.classList.add("text-danger");
             looseElement.classList.add("mt-3");
@@ -64,41 +85,32 @@
             userInputBlock.appendChild(looseElement);
             playBtn.removeEventListener("click", onPlayerGuess);
             playBtn.disabled = true;
-        } else {
-
-            if (userNumber === answer) {                
-                document.getElementById("winBtn").click();
-            } else {
-                let userNumberArr = Array.from(userNumStr);
-                let bullsCount = 0;
-                let cowsCount = 0;
-
-                for (let i = 0; i < userNumberArr.length; i++) {
-                    const numStr = userNumberArr[i];
-
-                    if (answerNumberArr.includes(numStr)) {
-                        let indexMatch = numStr === answerNumberArr[i];
-
-                        if (indexMatch) {
-                            bullsCount++;
-                        } else {
-                            cowsCount++;
-                        }
-                    }
-                }
-
-                let output = document.createElement("li");
-                output.classList.add("mb-1");
-
-                let bullsWord = bullsCount === 1 ? "bull" : "bulls";
-                let cowsWord = cowsCount === 1 ? "cow" : "cows";
-
-                output.textContent = `${bullsCount} ${bullsWord} and ${cowsCount} ${cowsWord}. Your guess: ${userNumber}`;
-
-                userGuessesList.appendChild(output);
-            }
         }
 
+        function getBullsAndCows(userNumStr) {
+            let userNumberArr = Array.from(userNumStr);
+            let bullsCount = 0;
+            let cowsCount = 0;
+
+            for (let i = 0; i < userNumberArr.length; i++) {
+                const numStr = userNumberArr[i];
+
+                if (answerNumberArr.includes(numStr)) {
+                    let indexMatch = numStr === answerNumberArr[i];
+
+                    if (indexMatch) {
+                        bullsCount++;
+                    } else {
+                        cowsCount++;
+                    }
+                }
+            }
+
+            let bullsWord = bullsCount === 1 ? "bull" : "bulls";
+            let cowsWord = cowsCount === 1 ? "cow" : "cows";
+
+            return `${bullsCount} ${bullsWord} and ${cowsCount} ${cowsWord}. Your guess: ${userNumber}`;
+        }
     }
 })(@Model.Number);
 </script>
