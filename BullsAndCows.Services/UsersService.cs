@@ -51,16 +51,19 @@ namespace BullsAndCows.Services
             var user = await this.dbContext.Users
                 .SingleOrDefaultAsync(usr => usr.UserName == model.Username);
 
-            if (!user.IsDeleted)
+            if (user != null)
             {
-                var loginResult = await this.signInManager
-                .PasswordSignInAsync(model.Username, model.Password, false, lockoutOnFailure: false);
-
-                if (loginResult.Succeeded)
+                if (!user.IsDeleted)
                 {
-                    return true;
+                    var loginResult = await this.signInManager
+                    .PasswordSignInAsync(model.Username, model.Password, false, lockoutOnFailure: false);
+
+                    if (loginResult.Succeeded)
+                    {
+                        return true;
+                    }
                 }
-            }            
+            }
 
             return false;
         }
