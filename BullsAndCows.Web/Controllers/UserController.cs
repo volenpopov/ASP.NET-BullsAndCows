@@ -1,8 +1,7 @@
-﻿using BullsAndCows.Models.BindingModels;
+﻿using BullsAndCows.Common;
+using BullsAndCows.Models.BindingModels;
 using BullsAndCows.Services.Contracts;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -36,8 +35,7 @@ namespace BullsAndCows.Web.Controllers
 
             if (!userCreationStatus)
             { 
-                //TODO: make status msg to a constant 
-                model.StatusMessage = "Error: User already exists. Please, try again with different username.";
+                model.StatusMessage = GlobalConstants.FailedUserRegisterMsg;
                 return View(model);
             }
 
@@ -55,8 +53,7 @@ namespace BullsAndCows.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                //TODO: make error msg constant
-                model.StatusMessage = "Error: Invalid username or password!";
+                model.StatusMessage = GlobalConstants.FailedLoginMsg;
                 return View(model);
             }
 
@@ -64,7 +61,7 @@ namespace BullsAndCows.Web.Controllers
 
             if (!loginStatus)
             {
-                model.StatusMessage = "Error: Invalid username or password!";
+                model.StatusMessage = GlobalConstants.FailedLoginMsg;
                 return View(model);
             }
 

@@ -1,4 +1,5 @@
-﻿using BullsAndCows.Data;
+﻿using BullsAndCows.Common;
+using BullsAndCows.Data;
 using BullsAndCows.Data.Models;
 using BullsAndCows.Models.BindingModels;
 using BullsAndCows.Models.ViewModels;
@@ -89,7 +90,9 @@ namespace BullsAndCows.Services
             var userProfileViewMdel = new UserProfileViewModel
             {
                 Username = user.UserName,
-                CreatedOn = user.CreatedOn.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+                CreatedOn = user.CreatedOn
+                    .ToString(GlobalConstants.DateFormat, CultureInfo.InvariantCulture) 
+                    + $" ({GlobalConstants.ServerTimeZone})",
                 Wins = user.Wins,
                 Losses = user.Losses,
                 TotalPoints = user.TotalPoints,

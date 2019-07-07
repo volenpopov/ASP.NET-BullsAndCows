@@ -1146,6 +1146,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "BullsAndCows.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BullsAndCows.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BullsAndCows.Common.dll": {}
+        }
       }
     }
   },
@@ -3910,10 +3920,16 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "BullsAndCows.Common/1.0.0": {
+      "type": "project",
+      "path": "../BullsAndCows.Common/BullsAndCows.Common.csproj",
+      "msbuildProject": "../BullsAndCows.Common/BullsAndCows.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "BullsAndCows.Common >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.4",
       "NETStandard.Library >= 2.0.3"
@@ -3948,7 +3964,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Common\\BullsAndCows.Common.csproj": {
+              "projectPath": "C:\\Users\\volenpopov\\Desktop\\Project\\ASP.NET-BullsAndCows\\BullsAndCows.Common\\BullsAndCows.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

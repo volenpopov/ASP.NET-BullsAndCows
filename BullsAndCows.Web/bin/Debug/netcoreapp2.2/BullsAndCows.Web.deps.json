@@ -457,8 +457,17 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "BullsAndCows.Common/1.0.0": {
+        "runtime": {
+          "BullsAndCows.Common.dll": {}
+        },
+        "compile": {
+          "BullsAndCows.Common.dll": {}
+        }
+      },
       "BullsAndCows.Data/1.0.0": {
         "dependencies": {
+          "BullsAndCows.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
         },
@@ -470,6 +479,9 @@
         }
       },
       "BullsAndCows.Models/1.0.0": {
+        "dependencies": {
+          "BullsAndCows.Common": "1.0.0"
+        },
         "runtime": {
           "BullsAndCows.Models.dll": {}
         },
@@ -3793,6 +3805,11 @@
       "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
+    },
+    "BullsAndCows.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BullsAndCows.Data/1.0.0": {
       "type": "project",

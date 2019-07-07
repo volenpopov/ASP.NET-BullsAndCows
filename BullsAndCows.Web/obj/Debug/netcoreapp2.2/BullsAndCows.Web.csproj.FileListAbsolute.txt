@@ -71,3 +71,5 @@ C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\De
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Ranking.g.cshtml.cs
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Game\Index.g.cshtml.cs
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\obj\Debug\netcoreapp2.2\Razor\Views\Game\Win.g.cshtml.cs
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\bin\Debug\netcoreapp2.2\BullsAndCows.Common.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Web\bin\Debug\netcoreapp2.2\BullsAndCows.Common.pdb

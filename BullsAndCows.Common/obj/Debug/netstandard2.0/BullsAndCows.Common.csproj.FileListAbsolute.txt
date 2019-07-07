@@ -1,0 +1,8 @@
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\bin\Debug\netstandard2.0\BullsAndCows.Common.deps.json
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\bin\Debug\netstandard2.0\BullsAndCows.Common.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\bin\Debug\netstandard2.0\BullsAndCows.Common.pdb
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.csproj.CoreCompileInputs.cache
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.AssemblyInfoInputs.cache
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.AssemblyInfo.cs
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Common\obj\Debug\netstandard2.0\BullsAndCows.Common.pdb

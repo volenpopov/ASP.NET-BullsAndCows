@@ -1,25 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BullsAndCows.Common;
+using System.ComponentModel.DataAnnotations;
 
 namespace BullsAndCows.Models.BindingModels
 {
     public class UserBindingModel
-    {
-        //TODO: error msg constant
-
+    {        
         [Required]
         [Display(Name = "Username")]
-        [StringLength(25, MinimumLength = 5, ErrorMessage = "{0} must be between {2} and {1} characters long!")]
+        [StringLength(25, MinimumLength = 5, ErrorMessage = GlobalConstants.StringLengthErrorMsg)]
         public string Username { get; set; }
 
         [Required]
-        [StringLength(25, MinimumLength = 5, ErrorMessage = "{0} must be between {2} and {1} characters long!")]
+        [StringLength(25, MinimumLength = 5, ErrorMessage = GlobalConstants.StringLengthErrorMsg)]
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Invalid {0}!")]
+        [Compare("Password", ErrorMessage = GlobalConstants.InvalidParameterErrorMsg)]
         public string ConfirmPassword { get; set; }
 
         public string StatusMessage { get; set; }

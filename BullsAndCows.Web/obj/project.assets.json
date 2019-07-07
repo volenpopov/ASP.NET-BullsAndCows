@@ -4721,10 +4721,21 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "BullsAndCows.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BullsAndCows.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BullsAndCows.Common.dll": {}
+        }
+      },
       "BullsAndCows.Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BullsAndCows.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
         },
@@ -4738,6 +4749,9 @@
       "BullsAndCows.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BullsAndCows.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BullsAndCows.Models.dll": {}
         },
@@ -12964,6 +12978,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "BullsAndCows.Common/1.0.0": {
+      "type": "project",
+      "path": "../BullsAndCows.Common/BullsAndCows.Common.csproj",
+      "msbuildProject": "../BullsAndCows.Common/BullsAndCows.Common.csproj"
     },
     "BullsAndCows.Data/1.0.0": {
       "type": "project",

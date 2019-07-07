@@ -1,4 +1,5 @@
-﻿using BullsAndCows.Data.Common;
+﻿using BullsAndCows.Common;
+using BullsAndCows.Data.Common;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,7 +9,7 @@ namespace BullsAndCows.Data.Models
     {
         public Game() : base()
         {
-            this.Number = new Random().Next(1000, 9999);
+            this.Number = new Random().Next(GlobalConstants.MinFourDigitNumber, GlobalConstants.MaxFourDigitNumber);
             this.Status = GameStatus.Lost;
         }
 

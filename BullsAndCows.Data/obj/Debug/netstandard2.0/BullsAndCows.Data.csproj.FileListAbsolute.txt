@@ -7,3 +7,6 @@ C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\D
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Data.pdb
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.dll
 C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.pdb
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Common.dll
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\bin\Debug\netstandard2.0\BullsAndCows.Common.pdb
+C:\Users\volenpopov\Desktop\Project\ASP.NET-BullsAndCows\BullsAndCows.Data\obj\Debug\netstandard2.0\BullsAndCows.Data.csproj.CopyComplete

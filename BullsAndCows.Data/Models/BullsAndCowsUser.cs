@@ -1,4 +1,5 @@
-﻿using BullsAndCows.Data.Common;
+﻿using BullsAndCows.Common;
+using BullsAndCows.Data.Common;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,7 @@ namespace BullsAndCows.Data.Models
             => this.Games.Where(game => game.Status == GameStatus.Lost).Count();
 
         [NotMapped]
-        public int TotalPoints => this.Wins * 3;
-        //TODO: constant for the 3points on a win
-
+        public int TotalPoints => this.Wins * GlobalConstants.PointsPerWin;        
 
         [NotMapped]
         public int TotalGames => this.Wins + this.Losses;
