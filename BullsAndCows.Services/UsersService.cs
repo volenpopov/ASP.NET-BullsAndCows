@@ -48,13 +48,19 @@ namespace BullsAndCows.Services
 
         public async Task<bool> LoginUserAsync(UserLoginBindingModel model)
         {
-            var loginResult = await this.signInManager
+            var user = await this.dbContext.Users
+                .SingleOrDefaultAsync(usr => usr.UserName == model.Username);
+
+            if (!user.IsDeleted)
+            {
+                var loginResult = await this.signInManager
                 .PasswordSignInAsync(model.Username, model.Password, false, lockoutOnFailure: false);
 
-            if (loginResult.Succeeded)
-            {
-                return true;
-            }
+                if (loginResult.Succeeded)
+                {
+                    return true;
+                }
+            }            
 
             return false;
         }
