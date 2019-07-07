@@ -52,6 +52,23 @@
         </dl>
     </div>
     <div>
+        <a class="btn btn-danger mr-2" id="deleteBtn" href="#">Delete account</a>
         <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Go Back</a>
+        <a hidden asp-controller="User" asp-action="Delete" id="confirmedDelete"></a>
     </div>
 </div>
+
+<script>
+    (function () {
+        let deleteBtn = document.getElementById("deleteBtn");
+        let confirmedDeleteBtn = document.getElementById("confirmedDelete");
+
+        deleteBtn.addEventListener("click", function () {
+            let confirmation = confirm("Please confirm that you want to delete your account!");
+
+            if (confirmation) {
+                confirmedDeleteBtn.click();
+            }
+        })
+    })()
+</script>
