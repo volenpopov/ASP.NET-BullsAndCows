@@ -14,7 +14,7 @@
             <button class="btn btn-primary" id="playBtn">Make a guess</button>
         </div>
         <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
-            <ul class="py-3 text-center" id="guessesList" style="font-size: 1.2rem;"></ul>
+            <ul class="py-3" id="guessesList" style="font-size: 1.2rem;"></ul>
         </div>
         <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
             <p class="display-4">@Model.Number</p>
@@ -40,6 +40,7 @@
     let answerNumberArr = Array.from(answer.toString());
 
     function onPlayerGuess() {
+        debugger;
         playerGuessesCounter++;
 
         let userNumStr = userInput.value;
@@ -75,9 +76,9 @@
                     const numStr = userNumberArr[i];
 
                     if (answerNumberArr.includes(numStr)) {
-                        let numIndex = answerNumberArr.indexOf(numStr);
+                        let indexMatch = numStr === answerNumberArr[i];
 
-                        if (i === numIndex) {
+                        if (indexMatch) {
                             bullsCount++;
                         } else {
                             cowsCount++;
