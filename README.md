@@ -4,7 +4,7 @@
 
 ### Summary:
 
-**Guest users** can create an account and view the top 25 ranking.
+**Guest users** can view the top 25 ranking and also create an account.
 
 **Registered users** can login, view their profile, delete their account, and play the game. User profile contains info about: user register date and game stats (wins, losses, total games, total points, win/loss ratio).
 
