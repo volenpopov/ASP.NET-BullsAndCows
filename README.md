@@ -10,4 +10,4 @@
 
 **Playing the game** - the user has 8 tries to guess a randomly generated 4-digit number. On each try he/she will receive info about how many bulls and cows he/she managed to guess. A cow is a number that is present in the answer. A bull is a number that is present in the answer and also that is at the correct position. If the user wins he will get 3 points added to his score.  
 
-Note: 35 users and 150 games have been seeded in development mode. You can pick any username from the top 25 and login with password: 12345.
+Note: 35 users and 150 games have been seeded in development mode. At start you can pick any username from the top 25 and login with password: 12345.
