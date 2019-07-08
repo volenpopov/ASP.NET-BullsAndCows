@@ -95,7 +95,7 @@ namespace BullsAndCows.Services
                 Losses = user.Losses,
                 TotalPoints = user.TotalPoints,
                 TotalGames = user.TotalGames,
-                WinLossRatio = user.WinLossRatio
+                WinLossRatio = $"{user.WinLossRatio:f1}%"
             };
            
             return userProfileViewMdel;
@@ -128,7 +128,7 @@ namespace BullsAndCows.Services
                     Losses = user.Losses,
                     TotalPoints = user.TotalPoints,
                     TotalGames = user.TotalGames,
-                    WinLossRatio = user.WinLossRatio
+                    WinLossRatio = $"{user.WinLossRatio:f1}%"
                 };
 
                 userRankingList.Add(userRankingViewModel);

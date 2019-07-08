@@ -31,7 +31,7 @@ namespace BullsAndCows.Data.Models
         public int TotalGames => this.Wins + this.Losses;
 
         [NotMapped]
-        public string WinLossRatio
+        public double WinLossRatio
         {
             get
             {
@@ -40,10 +40,10 @@ namespace BullsAndCows.Data.Models
                 if (totalGames > 0)
                 {
                     var ratio = (double)this.Wins / this.TotalGames;
-                    return $"{ratio * 100:f1}%";
+                    return ratio * 100;
                 }
 
-                return "0%";
+                return 0;
             }
         }
 
