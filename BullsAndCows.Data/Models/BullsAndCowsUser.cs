@@ -39,7 +39,7 @@ namespace BullsAndCows.Data.Models
 
                 if (totalGames > 0)
                 {
-                    var ratio = (double)this.Wins / this.TotalGames;
+                    var ratio = (double)this.Wins / totalGames;
                     return ratio * 100;
                 }
 
