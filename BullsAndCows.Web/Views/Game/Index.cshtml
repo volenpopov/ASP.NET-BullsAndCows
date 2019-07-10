@@ -18,9 +18,7 @@
             <ul class="py-3" id="guessesList" style="font-size: 1.2rem;"></ul>
         </div>
         <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-center">
-            <p style="font-size:2rem">XXXX</p>
-            <p class="d-block font-italic text-center">I am leaving the answer below, so it is easier for you to test : )</p>
-            <p class="d-block">Answer: @Model.Number</p>
+            <p id="answerNum" style="font-size:2rem">....</p>
         </div>
     </div>
     <form hidden method="post" asp-controller="Game" asp-action="Win" asp-route-gameId="@Model.Id">
@@ -39,7 +37,7 @@
     
     let userGuessesList = document.getElementById("guessesList");
     let userInputBlock = document.getElementById("userInputBlock");
-    let userInput = document.getElementById("userNumber");
+    let userInput = document.getElementById("userNumber");    
 
     let playerGuessesCounter = 0;
     let answerNumberArr = Array.from(answer.toString());
@@ -85,11 +83,14 @@
             looseElement.classList.add("mt-1");
             looseElement.classList.add("display-4");
             looseElement.textContent = "You lost!";
-
-            userInputBlock.appendChild(looseElement);                        
+            
+            userInputBlock.appendChild(looseElement);             
 
             userInputBlock.removeChild(playBtn);
             tryAgainBtn.style.visibility = "visible";
+
+            let answerElement = document.getElementById("answerNum");                            
+            answerElement.textContent = `Answer: ${answer}`;
         }
 
         function getBullsAndCows(userNumStr) {
