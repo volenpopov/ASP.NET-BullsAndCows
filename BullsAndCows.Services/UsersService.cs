@@ -6,6 +6,7 @@ using BullsAndCows.Models.ViewModels;
 using BullsAndCows.Services.Contracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -150,6 +151,7 @@ namespace BullsAndCows.Services
                 .SingleOrDefaultAsync(usr => usr.UserName == username);
 
             user.IsDeleted = true;
+            user.DeletedOn = DateTime.UtcNow;
 
             await this.dbContext.SaveChangesAsync();
         }
