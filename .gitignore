@@ -243,3 +243,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# ignore appsettings configuration files
+**/appsettings.development.json
+**/appsettings.staging.json
+**/appsettings.production.json
