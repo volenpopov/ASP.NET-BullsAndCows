@@ -114,10 +114,10 @@ namespace BullsAndCows.Services
                 .ThenByDescending(user => user.WinLossRatio)
                 .ThenBy(user => user.TotalGames)
                 .ThenBy(user => user.CreatedOn)
-                .Take(25)
+                .Take(GlobalConstants.RankingCount)
                 .ToArray();
               
-            var userRankingList = new List<UserRankingViewModel>(25);
+            var userRankingList = new List<UserRankingViewModel>(GlobalConstants.RankingCount);
 
             foreach (var user in topUsers)
             {

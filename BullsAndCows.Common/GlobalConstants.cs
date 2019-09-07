@@ -8,7 +8,7 @@
 
         public const int MaxFourDigitNumber = 9999;
 
-        public const int NumberOfGamesToSeed = 150;
+        public const int RankingCount = 25;
 
         public const string DateFormat = "dd/MM/yyyy";
 
