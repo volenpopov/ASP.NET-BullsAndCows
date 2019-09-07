@@ -10,6 +10,8 @@
 
         public const int RankingCount = 25;
 
+        public const string GAMES_TABLE_NAME = "Games";
+
         public const string DateFormat = "dd/MM/yyyy";
 
         public const string StringLengthErrorMsg = "{0} must be between {2} and {1} characters long!";

@@ -2,9 +2,11 @@
 using BullsAndCows.Data.Common;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BullsAndCows.Data.Models
 {
+    [Table(GlobalConstants.GAMES_TABLE_NAME)]
     public class Game : BaseModel<string>
     {
         public Game() : base()
