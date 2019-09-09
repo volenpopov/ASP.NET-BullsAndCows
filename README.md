@@ -1,6 +1,6 @@
 # Bulls And Cows - Guess the 4-digit number
 
-**DEPLOYED TO:** https://bullsandcows.azurewebsites.net/)
+**DEPLOYED TO:** https://bullsandcows.azurewebsites.net
 
 ## Tech Stack: ASP.NET Core MVC 2.2, EF Core, SQL Server, JavaScript, Bootstrap
 
